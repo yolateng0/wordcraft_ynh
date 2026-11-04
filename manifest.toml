@@ -46,7 +46,7 @@ ram.runtime = "50M"
     # Release web officielle de WordCraft (wordcraft-web-<version>.zip)
     [resources.sources.main]
     url = "https://github.com/storytold/wordcraft/releases/download/v0.15.1/wordcraft-web-0.15.1.zip"
-    sha256 = "A_REMPLACER_PAR_LE_SHA256_DE_wordcraft-web-0.15.1.zip"
+sha256 = "da24ee317eececc6d41f20cfb46f5c4a7c281a5b34374b291ea4b4c63e4951a9"
     in_subdir = false
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset = "^wordcraft-web-.*\\.zip$"
