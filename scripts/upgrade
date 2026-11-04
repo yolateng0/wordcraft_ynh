@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source /usr/share/yunohost/helpers
+
+ynh_script_progression "Mise à jour des fichiers de WordCraft..."
+ynh_setup_source --dest_dir="$install_dir" --full_replace
+
+ynh_script_progression "Mise à jour de la configuration NGINX..."
+ynh_config_add_nginx
+
+ynh_script_progression "Mise à jour de $app terminée"

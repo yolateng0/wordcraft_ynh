@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source /usr/share/yunohost/helpers
+
+ynh_script_progression "Installation des fichiers de WordCraft..."
+ynh_setup_source --dest_dir="$install_dir"
+
+ynh_script_progression "Configuration de NGINX..."
+ynh_config_add_nginx
+
+ynh_script_progression "Installation de $app terminée"

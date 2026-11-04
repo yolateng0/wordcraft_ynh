@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source /usr/share/yunohost/helpers
+
+ynh_print_info "Rien de plus à sauvegarder : application statique, sans données."

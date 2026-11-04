@@ -1,0 +1,63 @@
+packaging_format = 2
+
+id = "wordcraft"
+name = "WordCraft"
+description.en = "Open-source word processor (.docx) running in the browser via WebAssembly"
+description.fr = "Traitement de texte open source (.docx) dans le navigateur via WebAssembly"
+
+# Version amont + "~ynh1" (incrémenter ~ynh2, ~ynh3… pour une retouche du paquet seule)
+version = "0.15.1~ynh1"
+
+maintainers = ["yolateng0"]
+
+[upstream]
+license = "MIT OR Apache-2.0"
+website = "https://github.com/storytold/wordcraft"
+code = "https://github.com/storytold/wordcraft"
+
+[integration]
+yunohost = ">= 12.0.0"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+# WordCraft n'a pas de comptes utilisateurs : l'accès est protégé par le portail
+# SSO de YunoHost (permissions SSOWAT adossées à l'annuaire LDAP), pas par l'app.
+ldap = "not_relevant"
+sso = "not_relevant"
+disk = "100M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/wordcraft"
+
+    # Accès restreint par défaut aux utilisateurs YunoHost (annuaire LDAP).
+    # Choisir "visitors" pour un accès public, ou un groupe précis.
+    [install.init_main_permission]
+    type = "group"
+    default = "all_users"
+
+[resources]
+    # Release web officielle de WordCraft (wordcraft-web-<version>.zip)
+    [resources.sources.main]
+    url = "https://github.com/storytold/wordcraft/releases/download/v0.15.1/wordcraft-web-0.15.1.zip"
+    sha256 = "A_REMPLACER_PAR_LE_SHA256_DE_wordcraft-web-0.15.1.zip"
+    in_subdir = false
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset = "^wordcraft-web-.*\\.zip$"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+    main.label = "WordCraft"
+    main.show_tile = true
+    # Pas de compte côté app : inutile de transmettre l'identité SSO en en-tête HTTP
+    main.auth_header = false

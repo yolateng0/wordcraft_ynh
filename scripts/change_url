@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source /usr/share/yunohost/helpers
+
+ynh_script_progression "Mise à jour de la configuration NGINX..."
+ynh_config_change_url_nginx
+
+ynh_script_progression "Changement d'URL de $app terminé"
