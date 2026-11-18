@@ -2,8 +2,8 @@ packaging_format = 2
 
 id = "wordcraft"
 name = "WordCraft"
-description.en = "Open-source word processor (.docx) running in the browser via WebAssembly"
-description.fr = "Traitement de texte open source (.docx) dans le navigateur via WebAssembly"
+description.en = "Open-source word processor running in the browser via WebAssembly"
+description.fr = "Traitement de texte open source dans le navigateur via WebAssembly"
 
 # Version amont + "~ynh1" (incrémenter ~ynh2, ~ynh3… pour une retouche du paquet seule)
 version = "0.15.1~ynh1"
@@ -45,8 +45,8 @@ ram.runtime = "50M"
 [resources]
     # Release web officielle de WordCraft (wordcraft-web-<version>.zip)
     [resources.sources.main]
-    url = "https://github.com/storytold/wordcraft/releases/download/v0.16.0/wordcraft-web-0.16.0.zip"
-sha256 = "612fcbe9c4fd8c8a2538e4b711dd78eb448859bbdb7f0f4517b26e99511d6f0e"
+    url = "https://github.com/storytold/wordcraft/releases/download/v0.18.1/wordcraft-web-0.18.1.zip"
+sha256 = "3daa7c2d1f209a7eeb2527fcefa3fe31e875848fb1970d68f54edae55fe0bc9f"
     in_subdir = true
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset = "^wordcraft-web-.*\\.zip$"
