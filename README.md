@@ -24,7 +24,7 @@ YunoHost, adossé à l'annuaire LDAP du serveur.
 
 1. Dans `manifest.toml`, changer la version dans `url` (tag `vX.Y.Z` et nom du fichier).
 2. Mettre à jour `sha256` avec la ligne `wordcraft-web-X.Y.Z.zip` du fichier `SHA256SUMS.txt` de la release.
-3. Mettre à jour `version` (ex. `0.16.0~ynh1`).
+3. Mettre à jour `version` (ex. `0.18.1~ynh1`).
 4. Sur le serveur : `yunohost app upgrade wordcraft -u https://github.com/yolateng0/wordcraft_ynh`
 
 ## Licence
