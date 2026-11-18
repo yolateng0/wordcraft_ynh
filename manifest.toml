@@ -2,8 +2,8 @@ packaging_format = 2
 
 id = "wordcraft"
 name = "WordCraft"
-description.en = "Open-source word processor running in the browser via WebAssembly"
-description.fr = "Traitement de texte open source dans le navigateur via WebAssembly"
+description.en = "Open-source word processor running in the browser via WebAssembly. The documents are open and saved in the user’s browser. Nothing is stored on the server, so there’s no data to save."
+description.fr = "Traitement de texte open source dans le navigateur via WebAssembly. Les documents sont ouverts et enregistrés dans le navigateur de l'utilisateur. Rien n'est stocké sur le serveur : il n'y a donc aucune donnée à sauvegarder."
 
 # Version amont + "~ynh1" (incrémenter ~ynh2, ~ynh3… pour une retouche du paquet seule)
 version = "0.15.1~ynh1"
